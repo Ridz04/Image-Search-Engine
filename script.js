@@ -10,7 +10,7 @@ let page = 1;
 
 async function searchImages(){
     keyword = searchBox.value;
-    const url = `https://api.unsplash.com/search/photos?page=1&query=office&client_id=R078bpqrFTKpn0TPF-L-UcWYPWFvHY-5TKk98LQUnNg&client_id=${accessKey}&per_page=12`;
+    const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}`;
 
     const response =await fetch(url);
     const data = await response.json();
